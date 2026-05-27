@@ -11,13 +11,6 @@ const newMember = new Schema(
     },
     tutorialStep: {
       type: Number,
-      required: true,
-      unique: false,
-    },
-    tutorialDmId: {
-      type: String,
-      required: false,
-      unique: false,
     },
   },
   {

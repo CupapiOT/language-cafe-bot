@@ -12,22 +12,26 @@ export default {
 
     const startButton = new ButtonBuilder()
       .setCustomId('dm-server-tutorial-start')
-      .setLabel('Start Tour')
+      .setLabel('Start Guide')
       .setStyle(ButtonStyle.Primary);
     const row = new ActionRowBuilder().addComponents(startButton);
-    await member.send({
-      content: `# Welcome to the Language Cafe discord server!
 
-I'd be happy to give you a quick tour of the server's most useful channels and features.
+    const dm = await member.send({
+      content: `# Welcome to the Language Cafe Discord Server!
+
+I'd be happy to walk you through the server and set up a personalized guide to its most useful channels and features.
 
 Press the button below to begin.
-If you'd rather explore on your own, you can ignore this message.`,
+If you'd rather explore on your own, you can ignore this message.
+
+*Note: To make sure the guide is visible, turn on "Show embeds and link previews" via \`Settings > Chat / Appearance > Show embeds and link previews\` to see the tutorial.*`,
       components: [row],
     });
 
     await NewMember.create({
       id: member.id,
       tutorialStep: 0,
+      tutorialChannelId: dm.channelId,
     });
   },
 };

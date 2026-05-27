@@ -1,5 +1,6 @@
 export const COLORS = {
   PRIMARY: 0xc3c3e5,
+  DM_SERVER_TUTORIAL_EMBEDS: 0xd89ba8,
 };
 
 // Anyone can access these.
@@ -7,7 +8,7 @@ export const GENERAL_CHANNELS = {
   customize: 'customize-community',
   faq: '807590113974026240',
   introductions: '739914668767707227',
-  newMembers: '1147035792380792842',
+  generalTable: '739912851904528414',
   findExchangePartner: '788764507857879041',
   eventCalendar: '1001846824577007707',
   resourceDrawer: '1102680206755496037',

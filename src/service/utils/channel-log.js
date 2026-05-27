@@ -22,7 +22,7 @@ export const channelLogWithoutEmbeds = (content) => {
 };
 
 export const generateInteractionCreateLogContent = (interaction, additionalMessage) => {
-  const guildName = interaction.guild == null ? 'Unknown Guild' : interaction.guild.name;
+  const guildName = interaction.guild == null ? '`undefined`' : interaction.guild.name;
   return `### Interaction Message\ntime: ${time(+Date.now().toString().slice(0, 10), 'F')}\nserver: ${
     guildName
   }\nchannel: \`#${interaction.channel.name}\`\ncommand: \`/${
